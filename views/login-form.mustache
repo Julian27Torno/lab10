@@ -1,0 +1,22 @@
+<h1>Login</h1>
+
+{{#error}}
+<p style="color:red">{{error}}</p>
+{{/error}}
+
+<form action="/login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required {{#disabled}}disabled{{/disabled}}><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required {{#disabled}}disabled{{/disabled}}><br><br>
+
+    {{^disabled}}
+    <input type="submit" value="Login">
+    {{/disabled}}
+
+    {{#disabled}}
+    <p>Login has been disabled due to too many failed attempts.</p>
+    <a href="/retry"><button type="button">Retry</button></a>
+    {{/disabled}}
+</form>

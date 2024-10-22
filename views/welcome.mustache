@@ -1,0 +1,23 @@
+<h1>Welcome to IPTIO</h1>
+<p>All registered users:</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#users}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{username}}</td>
+            <td>{{email}}</td>
+        </tr>
+        {{/users}}
+    </tbody>
+</table>
+
+<p><a href="/logout">Logout</a></p>
